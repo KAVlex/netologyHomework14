@@ -15,6 +15,10 @@ angular
             templateUrl: 'src/PokemonDetail/PokemonDetail.html',
             controller: 'PokemonDetailCtrl'
         }).
+        when('/pokemons/edit/:pokemonId', {
+            templateUrl: 'src/EditPokemon/EditPokemon.html',
+            controller: 'EditPokemonCtrl'
+        }).
         when('/create', {
             templateUrl: 'src/CreatePokemon/CreatePokemon.html',
             controller: 'CreatePokemonCtrl'

@@ -10,11 +10,11 @@ angular
             return {
 
                 getPokemons: function () {
-                    return $http.get('http://pokeapi.co/api/v2/pokemon/?limit=10');
+                    return $http.get('http://api.backendless.com/v1/data/pokemon');
                 },
 
                 getPokemon: function (pokemonId) {
-                    return $http.get('http://pokeapi.co/api/v2/pokemon/' + pokemonId);
+                    return $http.get('http://api.backendless.com/v1/data/pokemon/' + pokemonId);
                 },
 
                 createPokemon: function (pokemonData) {
@@ -29,6 +29,14 @@ angular
                     return $http({
                         method: 'DELETE',
                         url: 'https://api.backendless.com/v1/data/pokemon/' + pokemonId,
+                    });
+                },
+
+                editPokemon: function (id, data) {
+                    return $http({
+                        method: 'PUT',
+                        url: 'http://api.backendless.com/v1/data/pokemon/' + id,
+                        data
                     });
                 }
 
